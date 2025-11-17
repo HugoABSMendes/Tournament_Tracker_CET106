@@ -68,7 +68,7 @@
             placeNumberLabel.Name = "placeNumberLabel";
             placeNumberLabel.Size = new Size(253, 32);
             placeNumberLabel.TabIndex = 22;
-            placeNumberLabel.Text = "First Name";
+            placeNumberLabel.Text = "Place Number";
             // 
             // placeNameValue
             // 
@@ -94,6 +94,7 @@
             prizeAmountValue.Name = "prizeAmountValue";
             prizeAmountValue.Size = new Size(455, 26);
             prizeAmountValue.TabIndex = 27;
+            prizeAmountValue.Text = "0";
             prizeAmountValue.TextAlign = HorizontalAlignment.Center;
             // 
             // priceAmountLabel
@@ -112,6 +113,7 @@
             prizePercentageValue.Name = "prizePercentageValue";
             prizePercentageValue.Size = new Size(455, 26);
             prizePercentageValue.TabIndex = 29;
+            prizePercentageValue.Text = "0";
             prizePercentageValue.TextAlign = HorizontalAlignment.Center;
             // 
             // prizePercentageLabel
@@ -150,6 +152,7 @@
             createPrizeButton.TabIndex = 31;
             createPrizeButton.Text = "Create Prize";
             createPrizeButton.UseVisualStyleBackColor = false;
+            createPrizeButton.Click += createPrizeButton_Click;
             // 
             // CreatePrizeForm
             // 
@@ -169,7 +172,7 @@
             Controls.Add(placeNumberLabel);
             Controls.Add(headerLabel);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "CreatePrizeForm";
             Text = "Create Prize";
             ResumeLayout(false);
