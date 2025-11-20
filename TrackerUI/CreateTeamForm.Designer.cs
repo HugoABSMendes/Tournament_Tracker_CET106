@@ -36,15 +36,15 @@
             selectTeamMemberDropDown = new ComboBox();
             selectTeamMemberLabel = new Label();
             addNewMemberGroupBox = new GroupBox();
-            firstNameValue = new TextBox();
-            firstNameLabel = new Label();
-            lastNameValue = new TextBox();
-            lastNameLabel = new Label();
-            emailValue = new TextBox();
-            emailLabel = new Label();
+            createMemberButton = new Button();
             cellphoneValue = new TextBox();
             cellphoneLabel = new Label();
-            createMemberButton = new Button();
+            emailValue = new TextBox();
+            emailLabel = new Label();
+            lastNameValue = new TextBox();
+            lastNameLabel = new Label();
+            firstNameValue = new TextBox();
+            firstNameLabel = new Label();
             teamMembersListBox = new ListBox();
             deleteSelectedMemberButton = new Button();
             createTeamButton = new Button();
@@ -132,78 +132,6 @@
             addNewMemberGroupBox.TabStop = false;
             addNewMemberGroupBox.Text = "Add New Member";
             // 
-            // firstNameValue
-            // 
-            firstNameValue.Location = new Point(271, 71);
-            firstNameValue.Name = "firstNameValue";
-            firstNameValue.Size = new Size(248, 39);
-            firstNameValue.TabIndex = 21;
-            firstNameValue.TextAlign = HorizontalAlignment.Center;
-            // 
-            // firstNameLabel
-            // 
-            firstNameLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            firstNameLabel.ForeColor = Color.PaleTurquoise;
-            firstNameLabel.Location = new Point(12, 71);
-            firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new Size(253, 32);
-            firstNameLabel.TabIndex = 20;
-            firstNameLabel.Text = "First Name";
-            // 
-            // lastNameValue
-            // 
-            lastNameValue.Location = new Point(271, 118);
-            lastNameValue.Name = "lastNameValue";
-            lastNameValue.Size = new Size(248, 39);
-            lastNameValue.TabIndex = 23;
-            lastNameValue.TextAlign = HorizontalAlignment.Center;
-            // 
-            // lastNameLabel
-            // 
-            lastNameLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lastNameLabel.ForeColor = Color.PaleTurquoise;
-            lastNameLabel.Location = new Point(12, 118);
-            lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(253, 32);
-            lastNameLabel.TabIndex = 22;
-            lastNameLabel.Text = "Last Name";
-            // 
-            // emailValue
-            // 
-            emailValue.Location = new Point(271, 171);
-            emailValue.Name = "emailValue";
-            emailValue.Size = new Size(248, 39);
-            emailValue.TabIndex = 25;
-            emailValue.TextAlign = HorizontalAlignment.Center;
-            // 
-            // emailLabel
-            // 
-            emailLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            emailLabel.ForeColor = Color.PaleTurquoise;
-            emailLabel.Location = new Point(12, 171);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(253, 32);
-            emailLabel.TabIndex = 24;
-            emailLabel.Text = "Email";
-            // 
-            // cellphoneValue
-            // 
-            cellphoneValue.Location = new Point(271, 224);
-            cellphoneValue.Name = "cellphoneValue";
-            cellphoneValue.Size = new Size(248, 39);
-            cellphoneValue.TabIndex = 27;
-            cellphoneValue.TextAlign = HorizontalAlignment.Center;
-            // 
-            // cellphoneLabel
-            // 
-            cellphoneLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cellphoneLabel.ForeColor = Color.PaleTurquoise;
-            cellphoneLabel.Location = new Point(12, 224);
-            cellphoneLabel.Name = "cellphoneLabel";
-            cellphoneLabel.Size = new Size(253, 32);
-            cellphoneLabel.TabIndex = 26;
-            cellphoneLabel.Text = "Cell Number";
-            // 
             // createMemberButton
             // 
             createMemberButton.FlatAppearance.BorderColor = Color.Silver;
@@ -218,6 +146,83 @@
             createMemberButton.TabIndex = 20;
             createMemberButton.Text = "Create Member";
             createMemberButton.UseVisualStyleBackColor = true;
+            createMemberButton.Click += createMemberButton_Click;
+            // 
+            // cellphoneValue
+            // 
+            cellphoneValue.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cellphoneValue.Location = new Point(201, 224);
+            cellphoneValue.Name = "cellphoneValue";
+            cellphoneValue.Size = new Size(318, 32);
+            cellphoneValue.TabIndex = 27;
+            cellphoneValue.TextAlign = HorizontalAlignment.Center;
+            // 
+            // cellphoneLabel
+            // 
+            cellphoneLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cellphoneLabel.ForeColor = Color.PaleTurquoise;
+            cellphoneLabel.Location = new Point(12, 224);
+            cellphoneLabel.Name = "cellphoneLabel";
+            cellphoneLabel.Size = new Size(183, 32);
+            cellphoneLabel.TabIndex = 26;
+            cellphoneLabel.Text = "Cell Number";
+            // 
+            // emailValue
+            // 
+            emailValue.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            emailValue.Location = new Point(201, 171);
+            emailValue.Name = "emailValue";
+            emailValue.Size = new Size(318, 32);
+            emailValue.TabIndex = 25;
+            emailValue.TextAlign = HorizontalAlignment.Center;
+            // 
+            // emailLabel
+            // 
+            emailLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            emailLabel.ForeColor = Color.PaleTurquoise;
+            emailLabel.Location = new Point(12, 171);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new Size(183, 32);
+            emailLabel.TabIndex = 24;
+            emailLabel.Text = "Email";
+            // 
+            // lastNameValue
+            // 
+            lastNameValue.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lastNameValue.Location = new Point(201, 118);
+            lastNameValue.Name = "lastNameValue";
+            lastNameValue.Size = new Size(318, 32);
+            lastNameValue.TabIndex = 23;
+            lastNameValue.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lastNameLabel
+            // 
+            lastNameLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lastNameLabel.ForeColor = Color.PaleTurquoise;
+            lastNameLabel.Location = new Point(12, 118);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new Size(183, 32);
+            lastNameLabel.TabIndex = 22;
+            lastNameLabel.Text = "Last Name";
+            // 
+            // firstNameValue
+            // 
+            firstNameValue.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            firstNameValue.Location = new Point(201, 71);
+            firstNameValue.Name = "firstNameValue";
+            firstNameValue.Size = new Size(318, 32);
+            firstNameValue.TabIndex = 21;
+            firstNameValue.TextAlign = HorizontalAlignment.Center;
+            // 
+            // firstNameLabel
+            // 
+            firstNameLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            firstNameLabel.ForeColor = Color.PaleTurquoise;
+            firstNameLabel.Location = new Point(12, 71);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new Size(183, 32);
+            firstNameLabel.TabIndex = 20;
+            firstNameLabel.Text = "First Name";
             // 
             // teamMembersListBox
             // 
@@ -278,7 +283,7 @@
             Controls.Add(headerLabel);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "CreateTeamForm";
             Text = "Create Team";
             addNewMemberGroupBox.ResumeLayout(false);
