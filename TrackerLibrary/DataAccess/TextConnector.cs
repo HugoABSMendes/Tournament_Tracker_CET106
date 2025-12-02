@@ -10,11 +10,13 @@ namespace TrackerLibrary.DataAccess
 {
     public class TextConnector : IDataConnection
     {
+
         private const string PrizesFile = "PrizeModels.csv";
         private const string PeopleFile = "PersonModels.csv";
         private const string TeamFile = "TeamModels.csv";
         private const string TournamentFile = "TournamentModels.csv";
-
+        private const string MatchupFile = "MatchupModels.csv";
+        private const string MatchupEntryFile = "MatchupEntryModels.csv";
 
         //---------PRIZE---------
 
@@ -122,11 +124,13 @@ namespace TrackerLibrary.DataAccess
 
             model.Id = currentId;
 
+            model.SaveRoundsToFile(MatchupFile, MatchupEntryFile);
+
             tournaments.Add(model);
 
             tournaments.SaveToTournamentFile(TournamentFile);
 
-            return model; // Not in video. CreateTournament should be a void, but doing so throws me an error.
+            return model; //Remove later?
         }
     }
 }
