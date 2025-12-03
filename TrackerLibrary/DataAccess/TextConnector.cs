@@ -130,7 +130,7 @@ namespace TrackerLibrary.DataAccess
 
             tournaments.SaveToTournamentFile(TournamentFile);
 
-            return model; //Remove later?
+            return model; 
         }
     }
 }

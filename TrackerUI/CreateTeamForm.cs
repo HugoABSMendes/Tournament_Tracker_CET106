@@ -70,10 +70,10 @@ namespace TrackerUI
                 selectedTeamMembers.Add(p);
                 WireUpLists();
 
-                firstNameValue.Text = string.Empty;
-                lastNameValue.Text = string.Empty;
-                emailValue.Text = string.Empty;
-                cellphoneValue.Text = string.Empty;
+                firstNameValue.Text = "";
+                lastNameValue.Text = "";
+                emailValue.Text = "";
+                cellphoneValue.Text = "";
 
             }
             else

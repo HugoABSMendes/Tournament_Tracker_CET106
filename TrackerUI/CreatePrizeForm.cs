@@ -39,8 +39,8 @@ namespace TrackerUI
                 
                 this.Close();
 
-                //placeNameValue.Text = string.Empty;
-                //placeNumberValue.Text = string.Empty;
+                //placeNameValue.Text = "";
+                //placeNumberValue.Text = "";
                 //prizeAmountValue.Text = "0";
                 //prizePercentageValue.Text = "0";
             }
