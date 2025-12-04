@@ -35,12 +35,12 @@
             roundDropDown = new ComboBox();
             unplayedOnlyCheckbox = new CheckBox();
             matchupListBox = new ListBox();
-            teamOneNameLabel = new Label();
+            teamOneName = new Label();
             teamOneScoreLabel = new Label();
             teamOneScoreValue = new TextBox();
             teamTwoScoreValue = new TextBox();
             teamTwoScoreLabel = new Label();
-            teamTwoLabel = new Label();
+            teamTwoName = new Label();
             versusLabel = new Label();
             scoreButton = new Button();
             SuspendLayout();
@@ -83,6 +83,7 @@
             roundDropDown.Name = "roundDropDown";
             roundDropDown.Size = new Size(270, 26);
             roundDropDown.TabIndex = 3;
+            roundDropDown.SelectedIndexChanged += roundDropDown_SelectedIndexChanged;
             // 
             // unplayedOnlyCheckbox
             // 
@@ -108,17 +109,18 @@
             matchupListBox.Name = "matchupListBox";
             matchupListBox.Size = new Size(349, 266);
             matchupListBox.TabIndex = 5;
+            matchupListBox.SelectedIndexChanged += matchupListBox_SelectedIndexChanged;
             // 
-            // teamOneNameLabel
+            // teamOneName
             // 
-            teamOneNameLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            teamOneNameLabel.ForeColor = Color.PaleTurquoise;
-            teamOneNameLabel.Location = new Point(367, 153);
-            teamOneNameLabel.Name = "teamOneNameLabel";
-            teamOneNameLabel.Size = new Size(286, 32);
-            teamOneNameLabel.TabIndex = 6;
-            teamOneNameLabel.Text = "<team one>";
-            teamOneNameLabel.TextAlign = ContentAlignment.MiddleCenter;
+            teamOneName.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            teamOneName.ForeColor = Color.PaleTurquoise;
+            teamOneName.Location = new Point(367, 153);
+            teamOneName.Name = "teamOneName";
+            teamOneName.Size = new Size(286, 32);
+            teamOneName.TabIndex = 6;
+            teamOneName.Text = "<team one>";
+            teamOneName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // teamOneScoreLabel
             // 
@@ -154,16 +156,16 @@
             teamTwoScoreLabel.TabIndex = 10;
             teamTwoScoreLabel.Text = "Score";
             // 
-            // teamTwoLabel
+            // teamTwoName
             // 
-            teamTwoLabel.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            teamTwoLabel.ForeColor = Color.PaleTurquoise;
-            teamTwoLabel.Location = new Point(367, 351);
-            teamTwoLabel.Name = "teamTwoLabel";
-            teamTwoLabel.Size = new Size(286, 32);
-            teamTwoLabel.TabIndex = 9;
-            teamTwoLabel.Text = "<team two>";
-            teamTwoLabel.TextAlign = ContentAlignment.MiddleCenter;
+            teamTwoName.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            teamTwoName.ForeColor = Color.PaleTurquoise;
+            teamTwoName.Location = new Point(367, 351);
+            teamTwoName.Name = "teamTwoName";
+            teamTwoName.Size = new Size(286, 32);
+            teamTwoName.TabIndex = 9;
+            teamTwoName.Text = "<team two>";
+            teamTwoName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // versusLabel
             // 
@@ -201,10 +203,10 @@
             Controls.Add(versusLabel);
             Controls.Add(teamTwoScoreValue);
             Controls.Add(teamTwoScoreLabel);
-            Controls.Add(teamTwoLabel);
+            Controls.Add(teamTwoName);
             Controls.Add(teamOneScoreValue);
             Controls.Add(teamOneScoreLabel);
-            Controls.Add(teamOneNameLabel);
+            Controls.Add(teamOneName);
             Controls.Add(matchupListBox);
             Controls.Add(unplayedOnlyCheckbox);
             Controls.Add(roundDropDown);
@@ -213,7 +215,7 @@
             Controls.Add(headerLabel);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "TournamentViewerForm";
             Text = "Tournament Viewer";
             ResumeLayout(false);
@@ -228,12 +230,12 @@
         private ComboBox roundDropDown;
         private CheckBox unplayedOnlyCheckbox;
         private ListBox matchupListBox;
-        private Label teamOneNameLabel;
+        private Label teamOneName;
         private Label teamOneScoreLabel;
         private TextBox teamOneScoreValue;
         private TextBox teamTwoScoreValue;
         private Label teamTwoScoreLabel;
-        private Label teamTwoLabel;
+        private Label teamTwoName;
         private Label versusLabel;
         private Button scoreButton;
     }
