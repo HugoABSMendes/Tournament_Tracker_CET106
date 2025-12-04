@@ -97,6 +97,7 @@
             createTournamentButton.TabIndex = 33;
             createTournamentButton.Text = "Create Tournament";
             createTournamentButton.UseVisualStyleBackColor = false;
+            createTournamentButton.Click += createTournamentButton_Click;
             // 
             // TournamentDashboardForm
             // 
@@ -111,7 +112,7 @@
             Controls.Add(headerLabel);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "TournamentDashboardForm";
             Text = "Tournament Dashboard";
             ResumeLayout(false);
